@@ -1,1 +1,12 @@
- 
+ body {
+    background-color: aqua;
+ }
+h1 {
+    font-family:comic sans ms;
+    color:#43b343;
+}
+span {
+    font-family:monospace;
+    color:firebrick;
+    font-weight: bold;
+}
