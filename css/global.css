@@ -1,0 +1,252 @@
+*:not(.fa),  *:before:not(.fa), *:after:not(.fa) {
+  box-sizing: border-box;
+  font-family: Open Sans, Helvetica, Arial, sans-serif; /* Holy balls, lemme tell ya. Spent like an hour trying to figure out why FA wouldn't load. >.< */
+}
+
+html {
+  background: url(../img/site-bg.png);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Roboto Slab, Georgia, Garamond, serif;
+}
+
+/* ###########
+   SITE HEADER
+########### */
+
+header {
+  background: #efe200;
+  border-bottom: 2px solid #000;
+}
+
+.header-wrap {
+  max-width: 960px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.site-logo {
+  float: left;
+}
+
+.site-logo > img {
+  height: 100px;
+  margin-top: 10px;
+}
+
+nav {
+  float: right;
+}
+
+.site-nav {
+  display: table-cell;
+  vertical-align: bottom;
+  list-style-type: none;
+  margin-top: 0;
+  padding-right: 80px;
+  height: 120px;
+}
+
+.site-nav > li {
+  float: left;
+  font-size: 2em;
+  padding: 0 5px 0 5px;
+}
+
+.site-nav > li + li {
+  margin-left: 55px;
+}
+
+.site-nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  transition: transform 200ms ease 0s;
+}
+
+.site-nav a:hover {
+  transform: translateY(10px);
+}
+
+/*
+MAIN CONTENT
+*/
+
+.main-content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  background: #ccc;
+  box-shadow: 0 0 15px 0 #000;
+}
+
+.main-content > :not(.section-splitter) {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.callout-header {
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.callout-text {
+  margin-top: 2em;
+  float: left;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.welcome-msg {
+  margin: 0;
+  font-size: 5em;
+}
+
+.tagline {
+  margin: 0;
+  font-size: 3.5em;
+  margin-top: -10px;
+  color: #888;
+}
+
+.footnote {
+  margin: 0;
+  font-style: italic;
+}
+
+.callout-img {
+  float: right;
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 10px -10px #000;
+}
+
+.section-splitter {
+  text-align: center;
+  font-size: 3em;
+  background: #efe200;
+  border-style: solid;
+  border-color: #000;
+  border-width: 2px 0 2px 0;
+}
+
+.scp-wrapper {
+  text-align: center;
+}
+
+.super-cute-pics {
+  list-style: none;
+}
+
+.super-cute-pics > li:nth-child(2n) {
+  margin-left: 100px;
+  margin-right: 40px;
+  float: right;
+}
+
+.super-cute-pics > li:nth-child(2n-1) {
+  float: left;
+}
+
+.super-cute-pics > li:nth-child(n-2) {
+  margin-top: 20px;
+}
+
+.super-cute-pics img {
+  width: 350px;
+  border-radius: 10px 50px;
+}
+
+/*
+FOOTER
+*/
+
+footer {
+  background: #444;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  color: #eee;
+  text-align: center;
+}
+
+footer > * {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 33.33333333%;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #eee;
+}
+
+footer > p {
+  margin: 0;
+  line-height: 50px;
+}
+
+footer > ul {
+  list-style-type: none;
+}
+
+footer > ul > li {
+  display: inline-block;
+}
+
+.social-media-icons a {
+  height: 50px;
+  line-height: 50px;
+  transition: color 250ms ease 0s;
+  text-shadow: 1px 1px #888;
+}
+
+.social-media-icons a[class*="envelope"]:hover { color: #D9752B; }
+.social-media-icons a[class*="facebook"]:hover { color: #3a5795; }
+.social-media-icons a[class*="twitter"]:hover {  color: #55acee; }
+.social-media-icons a[class*="steam"]:hover {    color: #1CEA07; }
+
+.social-media-icons span {
+  margin-left: 4px;
+}
+
+.social-media-icons > li + li {
+  margin-left: 90px;
+  line-height: 50px;
+}
+
+.social-media-icons a:before {
+  font-size: 2em !important;
+  vertical-align: middle;
+}
+
+footer p:first-child {
+  text-align: left;
+  padding-left: 20px;
+}
+
+footer p:last-child {
+  text-align: right;
+  padding-right: 20px;
+}
+
+
+footer > p:last-child > a:first-of-type:hover {
+  color: #efe200;
+}
+
+footer > p:last-child > a:last-of-type:hover {
+  color: #7018B4;
+}
+
+footer i {
+  transition: color 750ms ease 0s;
+}
+
+footer i:hover {
+  color: red;
+}
