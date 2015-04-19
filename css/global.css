@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Enable for CSS shenanigans, courtesy of Parker's dumbass. <3 */
 
-/*html:hover .page-wrap {
+/* html:hover .page-wrap {
   transform: scale(.8) rotateY(20deg) translateZ(-00px);
 }
 
@@ -115,6 +115,26 @@ MAIN CONTENT
 
 .main-content p + p {
   margin-top: 20px;
+}
+
+.main-content p {
+  text-indent: 20px; 
+}
+
+.main-content a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+.main-content a:hover, .main-content a:focus {
+  text-shadow: 0 0 20px #000; 
+}
+
+.main-content .content-image {
+  float: left;
+  padding 5px;
+  height: 350px;
 }
 
 .callout-header {
@@ -251,7 +271,8 @@ footer a {
   font-family: Open Sans, Helvetica, Arial, sans-serif;
 }
 
-.social-media-icons a[class*="envelope"]:hover { color: #D9752B; }
+.hi-from-manistique a:hover { color: #8b4513; }
+.social-media-icons a[class*="envelope"]:hover { color: #ff5b02; }
 .social-media-icons a[class*="facebook"]:hover { color: #3a5795; }
 .social-media-icons a[class*="twitter"]:hover {  color: #55acee; }
 .social-media-icons a[class*="steam"]:hover {    color: #1CEA07; }
