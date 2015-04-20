@@ -3,13 +3,23 @@
 }
 
 html {
-  background: url(../img/site-bg.png);
+  background: url(/img/site-bg.jpg) no-repeat fixed;
+  background-size: cover;
   font-family: Open Sans, Helvetica, Arial, sans-serif;
   perspective: 1000px;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Roboto Slab, Georgia, Garamond, serif;
+}
+
+.show-bg {
+  margin-right: 10px !important;
+}
+
+.show-bg + * {
+  margin-left: 0 !important;
+  padding-left: 0;s
 }
 
 /* ###########
@@ -30,6 +40,8 @@ h1, h2, h3, h4, h5, h6 {
 header {
   background: #efe200;
   border-bottom: 2px solid #000;
+  position: relative;
+  z-index: 1000;
 }
 
 .header-wrap {
@@ -99,7 +111,7 @@ MAIN CONTENT
 .main-content {
   max-width: 960px;
   margin: 0 auto;
-  padding-bottom: 50px;
+  padding-bottom: 10px;
   background: #ccc;
   box-shadow: 0 0 15px 0 #000;
 }
@@ -111,6 +123,10 @@ MAIN CONTENT
 
 .main-content > h1:first-child {
   margin-top: 0;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 3em;
+  text-shadow: 0 1px 0 rgba(255,255,255,1);
 }
 
 .main-content p + p {
@@ -118,7 +134,7 @@ MAIN CONTENT
 }
 
 .main-content p {
-  text-indent: 20px; 
+  text-indent: 20px;
 }
 
 .main-content a {
@@ -128,13 +144,17 @@ MAIN CONTENT
 }
 
 .main-content a:hover, .main-content a:focus {
-  text-shadow: 0 0 20px #000; 
+  text-shadow: 0 0 20px #000;
 }
 
 .main-content .content-image {
   float: left;
-  padding 5px;
-  height: 350px;
+  padding: 10px;
+  width: 300px;
+}
+
+.main-content .content-image:nth-of-type(2n) {
+  float: right;
 }
 
 .callout-header {
@@ -184,6 +204,7 @@ MAIN CONTENT
 
 .scp-wrapper {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .super-cute-pics {
@@ -200,8 +221,12 @@ MAIN CONTENT
   float: left;
 }
 
-.super-cute-pics > li:nth-child(n-2) {
-  margin-top: 20px;
+.super-cute-pics > li:nth-child(1n-2) {
+  margin-top: 70px;
+}
+
+.super-cute-pics > li:nth-child(1), .super-cute-pics > li:nth-child(2) {
+  margin-top: 0 !important;
 }
 
 .super-cute-pics li {
@@ -213,6 +238,100 @@ MAIN CONTENT
 
 .super-cute-pics img {
   width: 350px;
+}
+
+.abt-imgs {
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.abt-imgs > li {
+  padding: 20px 20px;
+  border-bottom: 1px solid rgba(0,0,0,.5);
+  border-top: 1px solid rgba(255,255,255,1);
+}
+
+.abt-imgs > li:first-child {
+  border-top: none;
+}
+
+.abt-imgs > li:last-child {
+  border-bottom: none;
+}
+
+.abt-img {
+  position: relative;
+  margin-bottom: 20px !important;
+  border: 4px solid #fff;
+  transform: rotate(1deg);
+  box-shadow: 0 0 5px 0 rgba(0,0,0,.5);
+  margin: 10px;
+  transition: all 250ms ease 0s;
+  border-radius: 2px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.abt-img:hover {
+  transform: scale(1.05) !important;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+li:nth-of-type(n) > .abt-img {
+  transform: rotate(2deg);
+}
+
+li:nth-of-type(2n) > .abt-img {
+  transform: rotate(-2deg);
+}
+
+li:nth-of-type(3n-1) > .abt-img {
+  transform: rotate(1deg);
+}
+
+li:nth-of-type(4n-2) > .abt-img {
+  transform: rotate(-3deg);
+}
+
+.sources-list {
+  list-style-type: none;
+  padding-left: 0;
+  float: left;
+}
+
+.sources-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.sources-list > li {
+  padding: 5px 1px;
+  display: inline-block;
+  float: left;
+  background: #333;
+  color: #CCC;
+  border-left:  1px solid rgba(0,0,0,.3);
+  border-right: 1px solid rgba(255,255,255,.1);
+  transition: all 200ms ease 0s;
+}
+
+.sources-list > li:first-child {
+  border-left: none;
+}
+
+.sources-list > li:last-child {
+  border-right: none;
+}
+
+.sources-list > li:hover {
+  background: #444;
+}
+
+.sources-list a {
+  padding: 10px 10px;
 }
 
 /*
@@ -302,21 +421,22 @@ footer p:last-child {
 }
 
 
-footer p:last-child > a:first-of-type:hover {
-  color: #efe200;
+footer p:last-child > a:nth-of-type(2):hover {
+  color: #efe200 !important;
 }
 
 footer p:last-child > a:last-of-type:hover {
   color: #7018B4;
 }
 
-footer i {
+.kitten-love {
   transition: color 750ms ease 0s;
 }
 
-footer i:hover {
-  color: red;
+.kitten-love:hover {
+  color: red !important;
 }
+
 
 /*
 MEDIA QUERIES
