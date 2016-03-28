@@ -114,7 +114,6 @@ MAIN CONTENT
   padding-bottom: 10px;
   background: #ccc;
   box-shadow: 0 0 15px 0 #000;
-  text-align: center;
 }
 
 .main-content > :not(.section-splitter) {
