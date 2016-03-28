@@ -28,14 +28,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Enable for CSS shenanigans, courtesy of Parker's dumbass. <3 */
 
-/* html:hover .page-wrap {
+/*html:hover .page-wrap {
   transform: scale(.8) rotateY(20deg) translateZ(-00px);
 }
 
 .page-wrap {
   transition: all 500ms ease 0s;
-}
-*/
+}*/
+
 
 header {
   background: #efe200;
@@ -114,11 +114,19 @@ MAIN CONTENT
   padding-bottom: 10px;
   background: #ccc;
   box-shadow: 0 0 15px 0 #000;
+  text-align: center;
 }
 
 .main-content > :not(.section-splitter) {
   margin-left: 25px;
   margin-right: 25px;
+}
+
+.remix-center {
+    margin: 0 auto;
+    padding-bottom: 10px;
+    background: #ccc;
+    text-align: center;
 }
 
 .main-content > h1:first-child {
