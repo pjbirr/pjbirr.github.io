@@ -26,15 +26,15 @@ h1, h2, h3, h4, h5, h6 {
    SITE HEADER
 ########### */
 
-/* Enable for CSS shenanigans, courtesy of Parker's dumbass. <3 */
+/*Enable for CSS shenanigans, courtesy of Parker's dumbass. <3 */
 
-/*html:hover .page-wrap {
+html:hover .page-wrap {
   transform: scale(.8) rotateY(20deg) translateZ(-00px);
 }
 
 .page-wrap {
   transition: all 500ms ease 0s;
-}*/
+}
 
 
 header {
